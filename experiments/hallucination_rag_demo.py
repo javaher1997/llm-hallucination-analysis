@@ -17,8 +17,11 @@ print(f"Using device: {DEVICE}")
 MODEL_NAME = "gpt2"
 EMBEDDING_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 
-PROMPTS_PATH = Path("../data/prompts.json")
-DOCS_DIR = Path("../data/docs/")
+SCRIPT_DIR = Path(__file__).resolve().parent
+
+DATA_DIR = SCRIPT_DIR.parent / "data"
+PROMPTS_PATH = DATA_DIR / "prompts.json"
+DOCS_DIR = DATA_DIR / "docs"
 
 TOP_K = 1  # number of docs to retrieve per prompt
 
